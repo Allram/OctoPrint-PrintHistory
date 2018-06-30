@@ -265,12 +265,12 @@ class PrintHistoryPlugin(octoprint.plugin.StartupPlugin,
 
                 # version check: github repository
                 type="github_release",
-                user="imrahil",
+                user="toofishes",
                 repo="OctoPrint-PrintHistory",
                 current=self._plugin_version,
 
                 # update method: pip w/ dependency links
-                pip="https://github.com/imrahil/OctoPrint-PrintHistory/archive/{target_version}.zip"
+                pip="https://github.com/toofishes/OctoPrint-PrintHistory/archive/{target_version}.zip"
             )
         )
 
@@ -279,6 +279,7 @@ class PrintHistoryPlugin(octoprint.plugin.StartupPlugin,
         return None
 
 __plugin_name__ = "Print History Plugin"
+__plugin_description__ = "Saves filename, print time and filament usage for each print" 
 
 def __plugin_load__():
 	global __plugin_implementation__
